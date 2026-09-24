@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import BrandLogo from './BrandLogo';
 
 const Header = () => {
@@ -11,58 +12,61 @@ const Header = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <BrandLogo />
+          <Link href="/" className="hover:underline">
+            <BrandLogo />
+          </Link>
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8 text-sm font-medium relative">
-          <a href="#" className="hover:text-purple-600 transition-colors">Home</a>
+          <Link href="/" className="hover:text-purple-600 transition-colors">Home</Link>
 
           {/* Mega Menu Trigger */}
           <div className="group relative">
-            <button className="hover:text-purple-600 transition-colors">Programs</button>
+            <Link href="/courses" className="hover:text-purple-600 transition-colors">Programs</Link>
             {/* Mega Menu Panel */}
             <div className="absolute left-0 top-full hidden w-[600px] grid-cols-3 gap-6 rounded-b-xl bg-white p-6 shadow-lg group-hover:grid">
               <div>
                 <h4 className="mb-2 text-sm font-semibold text-gray-800">Technology</h4>
                 <ul className="space-y-1 text-gray-600">
-                  <li><a href="#" className="hover:text-purple-600">AI & Machine Learning</a></li>
-                  <li><a href="#" className="hover:text-purple-600">Data Science</a></li>
-                  <li><a href="#" className="hover:text-purple-600">Cloud Computing</a></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">AI & Machine Learning</Link></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Data Science</Link></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Cloud Computing</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="mb-2 text-sm font-semibold text-gray-800">Creative</h4>
                 <ul className="space-y-1 text-gray-600">
-                  <li><a href="#" className="hover:text-purple-600">Digital Marketing</a></li>
-                  <li><a href="#" className="hover:text-purple-600">Video Editing</a></li>
-                  <li><a href="#" className="hover:text-purple-600">Animation</a></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Digital Marketing</Link></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Video Editing</Link></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Animation</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="mb-2 text-sm font-semibold text-gray-800">Professional</h4>
                 <ul className="space-y-1 text-gray-600">
-                  <li><a href="#" className="hover:text-purple-600">Project Management</a></li>
-                  <li><a href="#" className="hover:text-purple-600">Finance & Accounting</a></li>
-                  <li><a href="#" className="hover:text-purple-600">Leadership</a></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Project Management</Link></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Finance & Accounting</Link></li>
+                  <li><Link href="/courses" className="hover:text-purple-600">Leadership</Link></li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <a href="#" className="hover:text-purple-600 transition-colors">Our Story</a>
-          <a href="#" className="hover:text-purple-600 transition-colors">Workshops</a>
-          <a href="#" className="hover:text-purple-600 transition-colors">Support</a>
+          <Link href="/about" className="hover:text-purple-600 transition-colors">Our Story</Link>
+          <Link href="/workshops" className="hover:text-purple-600 transition-colors">Workshops</Link>
+          <Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link>
+          <Link href="/support" className="hover:text-purple-600 transition-colors">Support</Link>
         </nav>
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <button className="rounded-lg border border-purple-600 px-4 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50">
+          <Link href="/contact" className="rounded-lg border border-purple-600 px-4 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50">
             Sign In
-          </button>
-          <button className="rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700">
+          </Link>
+          <Link href="/courses" className="rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700">
             Join Now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,26 +87,27 @@ const Header = () => {
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
         <div className="md:hidden border-t bg-white px-6 py-4 space-y-4 text-sm font-medium">
-          <a href="#" className="block hover:text-purple-600">Home</a>
+          <Link href="/" className="block hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
           <div>
             <span className="block font-semibold text-gray-700">Programs</span>
             <ul className="mt-2 space-y-2 pl-3 text-gray-600">
-              <li><a href="#" className="hover:text-purple-600">AI & Machine Learning</a></li>
-              <li><a href="#" className="hover:text-purple-600">Digital Marketing</a></li>
-              <li><a href="#" className="hover:text-purple-600">Leadership</a></li>
+              <li><Link href="/courses" className="hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>AI & Machine Learning</Link></li>
+              <li><Link href="/courses" className="hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Digital Marketing</Link></li>
+              <li><Link href="/courses" className="hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Leadership</Link></li>
             </ul>
           </div>
-          <a href="#" className="block hover:text-purple-600">Our Story</a>
-          <a href="#" className="block hover:text-purple-600">Workshops</a>
-          <a href="#" className="block hover:text-purple-600">Support</a>
+          <Link href="/about" className="block hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Our Story</Link>
+          <Link href="/workshops" className="block hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Workshops</Link>
+          <Link href="/blog" className="block hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
+          <Link href="/support" className="block hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Support</Link>
 
           <div className="flex flex-col gap-2 pt-4">
-            <button className="rounded-lg border border-purple-600 px-4 py-2 text-purple-600 hover:bg-purple-50">
+            <Link href="/contact" className="rounded-lg border border-purple-600 px-4 py-2 text-center text-purple-600 hover:bg-purple-50" onClick={() => setIsMobileMenuOpen(false)}>
               Sign In
-            </button>
-            <button className="rounded-lg bg-purple-600 px-4 py-2 text-white hover:bg-purple-700">
+            </Link>
+            <Link href="/courses" className="rounded-lg bg-purple-600 px-4 py-2 text-center text-white hover:bg-purple-700" onClick={() => setIsMobileMenuOpen(false)}>
               Join Now
-            </button>
+            </Link>
           </div>
         </div>
       )}

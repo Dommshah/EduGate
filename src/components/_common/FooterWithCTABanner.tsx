@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+import Link from 'next/link'
 import BrandLogo from "./BrandLogo"
 
 function DoodleBook(props:any){return(<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16"/></svg>)}
@@ -10,6 +12,7 @@ function Phone(props:any){return(<svg viewBox="0 0 24 24" className="h-4 w-4" fi
 
 
 export default function FooterWithCTABanner(){
+  const [year] = useState(() => new Date().getFullYear())
   return (
     <footer className="bg-[#F8F7FF] pt-10">
       {/* CTA Banner */}
@@ -33,15 +36,15 @@ export default function FooterWithCTABanner(){
                 className=" hidden h-40 w-40 rounded-full object-cover ring-4 ring-white/20 sm:block"
               />
               <div>
-                <h3 className="text-3xl font-extrabold leading-tight sm:text-4xl">Boost Your Career With<br/>EduGlobal Certificates</h3>
+                <h3 className="text-3xl font-extrabold leading-tight sm:text-4xl">Boost Your Career With<br/>EduGate Certificates</h3>
               </div>
             </div>
 
             {/* Right: CTA */}
             <div className="flex justify-end">
-              <a href="#courses" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 font-medium text-[#4F37D9] shadow hover:shadow-md">
+              <Link href="/courses" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 font-medium text-[#4F37D9] shadow hover:shadow-md">
                 Explore Programs <ArrowIcon className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -52,8 +55,8 @@ export default function FooterWithCTABanner(){
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand / about */}
           <div>
-            <BrandLogo />
-            <p className="mt-4 max-w-xs text-sm text-slate-600">At EduGlobal, we empower individuals with modern learning experiences designed to unlock new opportunities worldwide.</p>
+            <Link href="/"><BrandLogo /></Link>
+            <p className="mt-4 max-w-xs text-sm text-slate-600">At EduGate, we empower individuals with modern learning experiences designed to unlock new opportunities worldwide.</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
               <li className="flex items-center gap-2"><MapPin/> Silicon Valley, California, USA</li>
               <li className="flex items-center gap-2"><Phone/> +1 (408) 555-0134</li>
@@ -64,9 +67,11 @@ export default function FooterWithCTABanner(){
           <nav aria-label="Quick Links">
             <h4 className="font-semibold text-slate-900">Quick Links</h4>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
-              {['About Us','Our Courses','Partnerships','Success Stories','Pricing'].map((t)=> (
-                <li key={t}><a className="hover:text-violet-600" href="#">{t}</a></li>
-              ))}
+              <li><Link className="hover:text-violet-600" href="/about">About Us</Link></li>
+              <li><Link className="hover:text-violet-600" href="/courses">Our Courses</Link></li>
+              <li><Link className="hover:text-violet-600" href="/workshops">Workshops</Link></li>
+              <li><Link className="hover:text-violet-600" href="/blog">Blog</Link></li>
+              <li><Link className="hover:text-violet-600" href="/support">Support</Link></li>
             </ul>
           </nav>
 
@@ -74,9 +79,11 @@ export default function FooterWithCTABanner(){
           <nav aria-label="Explore">
             <h4 className="font-semibold text-slate-900">Explore</h4>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
-              {['Web Development','AI & Data Science','UI/UX Design','Business Management','Digital Marketing'].map((t)=> (
-                <li key={t}><a className="hover:text-violet-600" href="#">{t}</a></li>
-              ))}
+              <li><Link className="hover:text-violet-600" href="/courses">Web Development</Link></li>
+              <li><Link className="hover:text-violet-600" href="/courses">AI & Data Science</Link></li>
+              <li><Link className="hover:text-violet-600" href="/courses">UI/UX Design</Link></li>
+              <li><Link className="hover:text-violet-600" href="/courses">Business Management</Link></li>
+              <li><Link className="hover:text-violet-600" href="/courses">Digital Marketing</Link></li>
             </ul>
           </nav>
 
@@ -98,7 +105,7 @@ export default function FooterWithCTABanner(){
       {/* Bottom bar */}
       <div className="border-t border-slate-200/70">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-5 text-sm text-slate-500 md:flex-row">
-          <p>© {new Date().getFullYear()} EduGlobal. All rights reserved.</p>
+          <p>© {year} EduGate. All rights reserved.</p>
           <div className="flex items-center gap-4">
             {['facebook','twitter','linkedin','github','youtube'].map((s)=> (
               <a key={s} href="#" aria-label={s} className="rounded-full border border-slate-300 p-1 hover:border-violet-500 hover:text-violet-600">
@@ -111,5 +118,3 @@ export default function FooterWithCTABanner(){
     </footer>
   );
 }
-
-

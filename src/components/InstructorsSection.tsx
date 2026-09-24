@@ -93,7 +93,7 @@ export default function InstructorsSection() {
           </div>
 
           <a
-            href="#all-teachers"
+            href="/about"
             className="inline-flex items-center rounded-lg bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
           >
             Explore All Instructors

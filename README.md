@@ -1,6 +1,6 @@
-# EduGlobal 🌍📚  
+# EduGate 🌍📚  
 
-EduGlobal is a modern and fully responsive educational platform built with **Next.js**, **TailwindCSS**, and **Ant Design**.  
+EduGate is a modern and fully responsive educational platform built with **Next.js**, **TailwindCSS**, and **Ant Design**.  
 It provides learners, instructors, and institutions with a sleek, interactive, and performance-optimized interface.  
 
 ---
@@ -30,8 +30,8 @@ It provides learners, instructors, and institutions with a sleek, interactive, a
 
 ### 1️⃣ Clone the repo
 ```bash
-git clone https://github.com/your-username/eduglobal.git
-cd eduglobal
+git clone https://github.com/your-username/edugate.git
+cd edugate
 
 
 npm install
@@ -45,7 +45,7 @@ yarn dev
 
 
 ### Project Structure
-/eduglobal
+/edugate
  ├── app/                # Next.js App Router pages
  ├── components/         # Reusable UI components (Hero, Stats, Footer, etc.)
  ├── styles/             # Tailwind & global styles

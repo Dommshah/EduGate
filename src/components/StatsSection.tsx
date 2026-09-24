@@ -161,13 +161,13 @@ export default function StatsSection() {
           </p>
           <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-3">
             <a
-              href="#methodology"
+              href="/about"
               className="rounded-full border border-slate-300/70 bg-white/70 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur-md hover:shadow transition"
             >
               View methodology
             </a>
             <a
-              href="#get-started"
+              href="/courses"
               className="relative inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-black/5 hover:scale-[1.02] active:scale-[0.99] transition"
             >
               Start learning

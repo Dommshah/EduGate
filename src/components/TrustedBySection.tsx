@@ -57,8 +57,8 @@ const TrustedBySection = () => {
               </svg>
               <span className="text-sm">Inspiring Future Innovators</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Discover EduGlobal – Shaping Bright Futures Worldwide</h2>
-            <p className="mt-4 text-gray-600">At EduGlobal, we believe in transforming education through
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Discover EduGate – Shaping Bright Futures Worldwide</h2>
+            <p className="mt-4 text-gray-600">At EduGate, we believe in transforming education through
               innovation, accessibility, and world-class mentorship. Join a
               community of learners achieving excellence every day.</p>
 
@@ -88,7 +88,7 @@ const TrustedBySection = () => {
                 />
                 <div>
                   <div className="font-bold">Amelia Roberts</div>
-                  <div className="text-sm text-gray-500">Founder & CEO, EduGlobal</div>
+                  <div className="text-sm text-gray-500">Founder & CEO, EduGate</div>
                 </div>
               </div>
               <button className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors w-full sm:w-auto">

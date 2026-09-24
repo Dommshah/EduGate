@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EduGlobal - Learn Without Borders 🌍📚",
+  title: "EduGate - Learn Without Borders 🌍📚",
   description:
-    "EduGlobal is a modern e-learning platform offering courses, expert instructors, and insightful blogs. Empower your education journey with a sleek, responsive design.",
+    "EduGate is a modern e-learning platform offering courses, expert instructors, and insightful blogs. Empower your education journey with a sleek, responsive design.",
   keywords: [
-    "EduGlobal",
+    "EduGate",
     "e-learning",
     "online courses",
     "education platform",
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Your Name", url: "https://github.com/your-username" }],
   openGraph: {
-    title: "EduGlobal - Modern E-Learning Platform",
+    title: "EduGate - Modern E-Learning Platform",
     description:
-      "Explore EduGlobal, a responsive e-learning platform with courses, blogs, and modern UI built with Next.js and TailwindCSS.",
-    url: "https://eduglobal.vercel.app",
-    siteName: "EduGlobal",
+      "Explore EduGate, a responsive e-learning platform with courses, blogs, and modern UI built with Next.js and TailwindCSS.",
+    url: "https://edugate.vercel.app",
+    siteName: "EduGate",
     images: [
       {
-        url: "https://eduglobal.vercel.app/og-image.png",
+        url: "https://edugate.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "EduGlobal preview",
+        alt: "EduGate preview",
       },
     ],
     locale: "en_US",
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EduGlobal - Learn Without Borders 🌍📚",
+    title: "EduGate - Learn Without Borders 🌍📚",
     description:
-      "EduGlobal is a modern education platform built with Next.js and TailwindCSS.",
-    images: ["https://eduglobal.vercel.app/og-image.png"],
+      "EduGate is a modern education platform built with Next.js and TailwindCSS.",
+    images: ["https://edugate.vercel.app/og-image.png"],
   },
 };
 
